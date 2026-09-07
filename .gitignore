@@ -1,0 +1,62 @@
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+ENV/
+env/
+
+# Databases and runtime data
+*.db
+*.sqlite3
+bot1.db
+
+# Dynamic session files and credentials
+active_headers.json
+mafia_ck_*.json
+sent_live_messages.json
+.env
+*.env
+config.local.py
+
+# Logs
+*.log
+logs/
+
+# IDE and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Temporary and archives
+*.zip
+*.tar.gz
+scratch/
+.tempmediaStorage/
+.system_generated/
+
+# Legacy draft files
+doma*.py
