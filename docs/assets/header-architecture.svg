@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 50" width="100%" height="50" style="background:#0d1117; border-radius:8px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <style>
+    @keyframes flow { 0% { stroke-dashoffset: 40; } 100% { stroke-dashoffset: 0; } }
+    .stream-flow { stroke-dasharray: 4 4; animation: flow 1.5s infinite linear; }
+    .frame { stroke: #30363d; stroke-width: 1px; fill: #161b22; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+  </style>
+
+  <rect class="frame" x="1" y="1" width="878" height="48" rx="8" />
+
+  <!-- Node network icon -->
+  <g transform="translate(18, 17)">
+    <circle cx="4" cy="8" r="3" fill="#58a6ff" />
+    <circle cx="14" cy="4" r="3" fill="#3fb950" />
+    <circle cx="14" cy="12" r="3" fill="#a371f7" />
+    <line x1="4" y1="8" x2="14" y2="4" stroke="#58a6ff" stroke-width="1.2" />
+    <line x1="4" y1="8" x2="14" y2="12" stroke="#58a6ff" stroke-width="1.2" />
+  </g>
+
+  <!-- Title Text -->
+  <text x="44" y="31" fill="#f0f6fc" font-size="14" font-weight="700" letter-spacing="0.04em">SYSTEM ARCHITECTURE &amp; EVENT-DRIVEN PIPELINE</text>
+  <text x="445" y="31" fill="#8b949e" font-size="12" class="mono">| Multi-Threaded Ingestion</text>
+
+  <!-- Animated flow wire on right -->
+  <g transform="translate(730, 24)">
+    <line x1="0" y1="0" x2="120" y2="0" stroke="#3fb950" stroke-width="2" class="stream-flow" />
+  </g>
+</svg>

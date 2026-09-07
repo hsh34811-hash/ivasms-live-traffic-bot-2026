@@ -1,55 +1,176 @@
 {
-  "environment": {
-    "os": "Linux",
-    "os_release": "7.0.0-29-generic",
-    "architecture": "x86_64",
-    "python_version": "3.14.4",
-    "processor": "x86_64"
+  "metadata": {
+    "timestamp": "2026-09-07T19:29:43Z",
+    "environment": {
+      "os": "Linux",
+      "os_release": "7.0.0-29-generic",
+      "architecture": "x86_64",
+      "python_version": "3.14.4",
+      "python_compiler": "GCC 15.2.0",
+      "cpu_model": "AMD EPYC 7542 32-Core Processor",
+      "cpu_cores": 4,
+      "memory_total_gb": 15.57
+    },
+    "reproducibility": "python3 benchmarks/run_modern_benchmarks.py"
   },
-  "results": [
-    {
-      "name": "OTP Extraction (extract_otp)",
-      "total_ops": 16000,
-      "total_time_s": 0.10291757504455745,
-      "mean_us": 6.167525625,
-      "median_us": 5.881,
-      "min_us": 1.733,
-      "max_us": 137.749,
-      "stdev_us": 3.1411139380427757,
-      "throughput_ops_sec": 155464.21486391328
+  "benchmarks": {
+    "otp_extraction": {
+      "name": "OTP Token Extraction",
+      "description": "Multi-pattern compiled regex with boundary validation and token extraction",
+      "optimized": {
+        "total_calls": 96000,
+        "total_duration_s": 0.529070854,
+        "throughput_ops_sec": 181450.1768037292,
+        "latency_us": {
+          "min": 1.73,
+          "mean": 5.35,
+          "p50": 4.96,
+          "p90": 7.59,
+          "p95": 7.7,
+          "p99": 13.59,
+          "max": 224.15,
+          "stddev": 2.86
+        },
+        "memory": {
+          "peak_kib": 1.29,
+          "bytes_per_op": 0.17
+        }
+      },
+      "baseline": {
+        "total_calls": 96000,
+        "total_duration_s": 0.196321694,
+        "throughput_ops_sec": 488993.33560151537,
+        "latency_us": {
+          "min": 1.43,
+          "mean": 1.89,
+          "p50": 1.76,
+          "p90": 2.19,
+          "p95": 2.51,
+          "p99": 3.13,
+          "max": 208.04,
+          "stddev": 1.69
+        },
+        "memory": {
+          "peak_kib": 1.15,
+          "bytes_per_op": 0.15
+        }
+      },
+      "speedup_factor": 0.37,
+      "latency_reduction_pct": -206.8
     },
-    {
-      "name": "Service Detection (detect_service)",
-      "total_ops": 16000,
-      "total_time_s": 0.06522048101760447,
-      "mean_us": 3.8696284375,
-      "median_us": 3.016,
-      "min_us": 2.354,
-      "max_us": 193.814,
-      "stdev_us": 2.962161611765502,
-      "throughput_ops_sec": 245321.71106927656
+    "service_detection": {
+      "name": "Service Identifier Classification",
+      "description": "Fast keyword matcher across global telecom application identifiers",
+      "optimized": {
+        "total_calls": 96000,
+        "total_duration_s": 0.385151278,
+        "throughput_ops_sec": 249252.710515477,
+        "latency_us": {
+          "min": 2.32,
+          "mean": 3.85,
+          "p50": 3.02,
+          "p90": 7.23,
+          "p95": 7.35,
+          "p99": 11.17,
+          "max": 462.61,
+          "stddev": 3.0
+        },
+        "memory": {
+          "peak_kib": 2.24,
+          "bytes_per_op": 0.29
+        }
+      },
+      "baseline": {
+        "total_calls": 96000,
+        "total_duration_s": 0.075390401,
+        "throughput_ops_sec": 1273371.6590789855,
+        "latency_us": {
+          "min": 0.4,
+          "mean": 0.64,
+          "p50": 0.54,
+          "p90": 0.91,
+          "p95": 0.97,
+          "p99": 1.41,
+          "max": 103.62,
+          "stddev": 0.65
+        },
+        "memory": {
+          "peak_kib": 0.69,
+          "bytes_per_op": 0.09
+        }
+      },
+      "speedup_factor": 0.2,
+      "latency_reduction_pct": -657.7
     },
-    {
-      "name": "Smart Country Lookup (get_country_details_smart)",
-      "total_ops": 14000,
-      "total_time_s": 0.2725178049877286,
-      "mean_us": 19.232081214285714,
-      "median_us": 14.767,
-      "min_us": 7.374,
-      "max_us": 264.426,
-      "stdev_us": 13.417031003892081,
-      "throughput_ops_sec": 51372.79012147634
+    "country_lookup": {
+      "name": "Dialing Prefix & Range Resolution",
+      "description": "Smart indexed dial code lookup vs sequential scan across 240+ countries",
+      "optimized": {
+        "total_calls": 84000,
+        "total_duration_s": 1.666496625,
+        "throughput_ops_sec": 50405.142584672205,
+        "latency_us": {
+          "min": 7.31,
+          "mean": 19.64,
+          "p50": 14.66,
+          "p90": 46.68,
+          "p95": 47.04,
+          "p99": 62.06,
+          "max": 389.56,
+          "stddev": 13.71
+        },
+        "memory": {
+          "peak_kib": 3.72,
+          "bytes_per_op": 0.54
+        }
+      },
+      "baseline": {
+        "total_calls": 84000,
+        "total_duration_s": 0.21707768,
+        "throughput_ops_sec": 386958.25383798097,
+        "latency_us": {
+          "min": 0.59,
+          "mean": 2.41,
+          "p50": 1.09,
+          "p90": 8.95,
+          "p95": 9.02,
+          "p99": 12.7,
+          "max": 206.49,
+          "stddev": 3.48
+        },
+        "memory": {
+          "peak_kib": 0.11,
+          "bytes_per_op": 0.02
+        }
+      },
+      "speedup_factor": 0.13,
+      "latency_reduction_pct": -421.5
     },
-    {
-      "name": "Cookie Parsing (parse_cookies_input)",
-      "total_ops": 1000,
-      "total_time_s": 0.00489669106900692,
-      "mean_us": 4.652971,
-      "median_us": 5.48,
-      "min_us": 3.066,
-      "max_us": 20.779,
-      "stdev_us": 1.9246520770717956,
-      "throughput_ops_sec": 204219.54048304018
+    "cookie_parsing": {
+      "name": "Session Cookie Deserialization",
+      "description": "Dual Netscape Tabular & JSON Cookie format transformer",
+      "optimized": {
+        "total_calls": 3000,
+        "total_duration_s": 0.010329749,
+        "throughput_ops_sec": 290423.3200632465,
+        "latency_us": {
+          "min": 2.98,
+          "mean": 3.24,
+          "p50": 3.04,
+          "p90": 3.65,
+          "p95": 4.32,
+          "p99": 5.47,
+          "max": 19.75,
+          "stddev": 1.0
+        },
+        "memory": {
+          "peak_kib": 2.17,
+          "bytes_per_op": 2.22
+        }
+      },
+      "baseline": null,
+      "speedup_factor": 1.0,
+      "latency_reduction_pct": 0.0
     }
-  ]
+  }
 }

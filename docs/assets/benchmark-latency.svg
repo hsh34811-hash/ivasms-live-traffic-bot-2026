@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 210" width="100%" height="210" style="background:#0d1117; border-radius:10px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <style>
+    .hdr { fill: #f0f6fc; font-size: 13px; font-weight: 700; }
+    .th { fill: #8b949e; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+    .td { fill: #e6edf3; font-size: 12px; font-family: ui-monospace, SFMono-Regular, monospace; }
+    .td-name { fill: #f0f6fc; font-size: 12px; font-weight: 600; }
+    .row-line { stroke: #21262d; stroke-width: 1px; }
+  </style>
+
+  <g transform="translate(24, 24)">
+    <text class="hdr" x="0" y="0">Tail Latency Percentiles (Microseconds, µs - Lower is Better)</text>
+    <text x="832" y="0" fill="#3fb950" font-size="11" text-anchor="end">Sample: 96,000 runs</text>
+  </g>
+
+  <!-- Table Header -->
+  <g transform="translate(24, 48)">
+    <line class="row-line" x1="0" y1="0" x2="832" y2="0" />
+    <text class="th" x="10" y="16">Engine Component</text>
+    <text class="th" x="250" y="16">Min (µs)</text>
+    <text class="th" x="350" y="16">p50 / Median</text>
+    <text class="th" x="460" y="16">p90</text>
+    <text class="th" x="560" y="16">p95</text>
+    <text class="th" x="660" y="16">p99</text>
+    <text class="th" x="760" y="16">Max (µs)</text>
+    <line class="row-line" x1="0" y1="24" x2="832" y2="24" />
+  </g>
+
+  <!-- Row 1: OTP -->
+  <g transform="translate(24, 84)">
+    <text class="td-name" x="10" y="16">OTP Token Extraction</text>
+    <text class="td" x="250" y="16">1.73</text>
+    <text class="td" x="350" y="16" fill="#3fb950">4.96</text>
+    <text class="td" x="460" y="16">7.59</text>
+    <text class="td" x="560" y="16">7.70</text>
+    <text class="td" x="660" y="16" fill="#d29922">13.59</text>
+    <text class="td" x="760" y="16">224.15</text>
+    <line class="row-line" x1="0" y1="26" x2="832" y2="26" />
+  </g>
+
+  <!-- Row 2: Service Detection -->
+  <g transform="translate(24, 122)">
+    <text class="td-name" x="10" y="18">Service Classification</text>
+    <text class="td" x="250" y="18">2.32</text>
+    <text class="td" x="350" y="18" fill="#3fb950">3.02</text>
+    <text class="td" x="460" y="18">7.23</text>
+    <text class="td" x="560" y="18">7.35</text>
+    <text class="td" x="660" y="18" fill="#d29922">11.17</text>
+    <text class="td" x="760" y="18">462.61</text>
+    <line class="row-line" x1="0" y1="26" x2="832" y2="26" />
+  </g>
+
+  <!-- Row 3: Country Lookup -->
+  <g transform="translate(24, 160)">
+    <text class="td-name" x="10" y="18">Country Prefix Resolution</text>
+    <text class="td" x="250" y="18">7.31</text>
+    <text class="td" x="350" y="18" fill="#3fb950">14.66</text>
+    <text class="td" x="460" y="18">46.68</text>
+    <text class="td" x="560" y="18">47.04</text>
+    <text class="td" x="660" y="18" fill="#d29922">62.06</text>
+    <text class="td" x="760" y="18">389.56</text>
+  </g>
+</svg>

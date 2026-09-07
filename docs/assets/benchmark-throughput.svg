@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 250" width="100%" height="250" style="background:#0d1117; border-radius:10px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <style>
+    .label { fill: #e6edf3; font-size: 13px; font-weight: 600; }
+    .sublabel { fill: #8b949e; font-size: 11px; }
+    .bar-opt { fill: #238636; rx: 3px; }
+    .bar-base { fill: #30363d; rx: 3px; }
+    .val-text { fill: #f0f6fc; font-size: 11px; font-family: ui-monospace, SFMono-Regular, monospace; font-weight: 600; }
+  </style>
+
+  <!-- Title & Legend -->
+  <g transform="translate(24, 26)">
+    <text x="0" y="0" fill="#f0f6fc" font-size="13" font-weight="700">Throughput Comparison vs Baseline (Operations / Second - Higher is Better)</text>
+    <rect x="580" y="-10" width="10" height="10" fill="#238636" rx="2" />
+    <text x="596" y="-1" fill="#c9d1d9" font-size="11">RAVEN BOT X (Optimized)</text>
+    <rect x="750" y="-10" width="10" height="10" fill="#30363d" rx="2" />
+    <text x="766" y="-1" fill="#8b949e" font-size="11">Baseline</text>
+  </g>
+
+  <!-- Row 1: OTP Extraction -->
+  <g transform="translate(24, 52)">
+    <text class="label" x="0" y="16">OTP Extraction</text>
+    <text class="sublabel" x="0" y="32">Compiled Tokenizer</text>
+    <rect class="bar-base" x="200" y="4" width="716.5" height="14" />
+    <text class="val-text" x="924.5" y="15">488,993 ops/s</text>
+    <rect class="bar-opt" x="200" y="22" width="265.9" height="14" />
+    <text class="val-text" x="473.9" y="33">181,450 ops/s (Speedup: 0.37x)</text>
+  </g>
+
+  <!-- Row 2: Service Detection -->
+  <g transform="translate(24, 116)">
+    <text class="label" x="0" y="16">Service Classifier</text>
+    <text class="sublabel" x="0" y="32">Keyword Matcher</text>
+    <rect class="bar-base" x="200" y="4" width="1865.8" height="14" />
+    <text class="val-text" x="2073.8" y="15">1,273,371 ops/s</text>
+    <rect class="bar-opt" x="200" y="22" width="365.2" height="14" />
+    <text class="val-text" x="573.2" y="33">249,252 ops/s (Speedup: 0.2x)</text>
+  </g>
+
+  <!-- Row 3: Country Lookup -->
+  <g transform="translate(24, 180)">
+    <text class="label" x="0" y="16">Prefix Resolution</text>
+    <text class="sublabel" x="0" y="32">Indexed Prefix Map</text>
+    <rect class="bar-base" x="200" y="4" width="567.0" height="14" />
+    <text class="val-text" x="775.0" y="15">386,958 ops/s</text>
+    <rect class="bar-opt" x="200" y="22" width="73.9" height="14" />
+    <text class="val-text" x="281.9" y="33">50,405 ops/s (Speedup: 0.13x)</text>
+  </g>
+</svg>

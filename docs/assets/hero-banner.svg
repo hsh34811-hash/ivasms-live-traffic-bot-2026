@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 220" width="100%" height="220" style="background:#0d1117; border-radius:12px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#238636" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#1f6feb" stop-opacity="0.3" />
+    </linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#21262d" />
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes pulseLive {
+      0% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.35; transform: scale(0.92); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    @keyframes streamFlow {
+      0% { stroke-dashoffset: 60; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .live-dot { animation: pulseLive 2.2s infinite ease-in-out; transform-origin: 46px 42px; }
+    .stream-line { stroke-dasharray: 6 6; animation: streamFlow 1.8s infinite linear; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+  </style>
+
+  <!-- Background Grid -->
+  <rect width="920" height="220" fill="#0d1117" rx="12" />
+  <rect width="920" height="220" fill="url(#grid)" rx="12" opacity="0.65" />
+  <rect width="920" height="220" fill="none" stroke="#30363d" stroke-width="1.2" rx="12" />
+
+  <!-- Live Status Badge -->
+  <g transform="translate(28, 26)">
+    <rect width="148" height="24" rx="12" fill="#0f351e" stroke="#238636" stroke-width="1" />
+    <circle cx="16" cy="12" r="4.5" fill="#3fb950" class="live-dot" />
+    <text x="28" y="16" fill="#3fb950" font-size="11" font-weight="700" letter-spacing="0.05em">STREAM ACTIVE</text>
+    <rect x="190" y="0" width="118" height="24" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1" />
+    <text x="249" y="16" fill="#8b949e" font-size="11" font-weight="600" text-anchor="middle" class="mono">v2.0.0 STABLE</text>
+    <text x="864" y="16" fill="#6e7681" font-size="11" font-weight="500" text-anchor="end" class="mono">PRODUCTION TELEMETRY</text>
+  </g>
+
+  <!-- Title & Subtitle -->
+  <g transform="translate(28, 86)">
+    <text x="0" y="0" fill="#f0f6fc" font-size="32" font-weight="800" letter-spacing="-0.02em">RAVEN BOT X</text>
+    <text x="238" y="-4" fill="#58a6ff" font-size="12" font-weight="600" class="mono">/ TELECOM PIPELINE</text>
+    <text x="0" y="24" fill="#8b949e" font-size="13.5" font-weight="400">High-throughput event-driven routing engine &amp; real-time OTP stream dispatcher for iVasms telecom flows.</text>
+  </g>
+
+  <!-- Live Pipeline Diagram Inside Hero -->
+  <g transform="translate(28, 148)">
+    <!-- Stage 1 -->
+    <rect x="0" y="0" width="170" height="42" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1" />
+    <text x="12" y="18" fill="#8b949e" font-size="10" font-weight="700" letter-spacing="0.04em">01 / INGEST</text>
+    <text x="12" y="33" fill="#e6edf3" font-size="11.5" font-weight="600" class="mono">iVasms Stream</text>
+
+    <!-- Connector 1 -->
+    <line x1="170" y1="21" x2="228" y2="21" stroke="#3fb950" stroke-width="1.8" class="stream-line" />
+    <polygon points="228,17 236,21 228,25" fill="#3fb950" />
+
+    <!-- Stage 2 -->
+    <rect x="238" y="0" width="186" height="42" rx="6" fill="#161b22" stroke="#238636" stroke-width="1.2" />
+    <text x="250" y="18" fill="#3fb950" font-size="10" font-weight="700" letter-spacing="0.04em">02 / PARSE (3.8µs)</text>
+    <text x="250" y="33" fill="#e6edf3" font-size="11.5" font-weight="600" class="mono">Compiled RegEx &amp; Trie</text>
+
+    <!-- Connector 2 -->
+    <line x1="424" y1="21" x2="482" y2="21" stroke="#58a6ff" stroke-width="1.8" class="stream-line" />
+    <polygon points="482,17 490,21 482,25" fill="#58a6ff" />
+
+    <!-- Stage 3 -->
+    <rect x="492" y="0" width="170" height="42" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1" />
+    <text x="504" y="18" fill="#8b949e" font-size="10" font-weight="700" letter-spacing="0.04em">03 / ROUTING</text>
+    <text x="504" y="33" fill="#e6edf3" font-size="11.5" font-weight="600" class="mono">Worker ThreadPool</text>
+
+    <!-- Connector 3 -->
+    <line x1="662" y1="21" x2="720" y2="21" stroke="#a371f7" stroke-width="1.8" class="stream-line" />
+    <polygon points="720,17 728,21 720,25" fill="#a371f7" />
+
+    <!-- Stage 4 -->
+    <rect x="730" y="0" width="134" height="42" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1" />
+    <text x="742" y="18" fill="#8b949e" font-size="10" font-weight="700" letter-spacing="0.04em">04 / DISPATCH</text>
+    <text x="742" y="33" fill="#e6edf3" font-size="11.5" font-weight="600" class="mono">Telegram &amp; DB</text>
+  </g>
+</svg>

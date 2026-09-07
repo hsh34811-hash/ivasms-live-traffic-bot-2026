@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 50" width="100%" height="50" style="background:#0d1117; border-radius:8px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <style>
+    @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+    @keyframes borderGlow { 0%, 100% { stroke-opacity: 0.4; } 50% { stroke-opacity: 1; } }
+    .cursor { animation: blink 1s infinite; fill: #58a6ff; }
+    .frame { stroke: #30363d; stroke-width: 1px; fill: #161b22; animation: borderGlow 3s infinite ease-in-out; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+  </style>
+
+  <rect class="frame" x="1" y="1" width="878" height="48" rx="8" />
+
+  <!-- Status indicator -->
+  <g transform="translate(18, 17)">
+    <rect x="0" y="0" width="16" height="16" rx="4" fill="#1f6feb" opacity="0.2" />
+    <path d="M4,8 L7,11 L12,5" fill="none" stroke="#58a6ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Title Text -->
+  <text x="46" y="31" fill="#f0f6fc" font-size="14" font-weight="700" letter-spacing="0.04em">REDEEM &amp; INTELLECTUAL PROPERTY</text>
+  <text x="328" y="31" fill="#8b949e" font-size="12" class="mono">| PolyForm Noncommercial 1.0.0</text>
+
+  <!-- Terminal prompt & blinking cursor on right -->
+  <g transform="translate(850, 29)">
+    <rect x="-10" y="-12" width="8" height="14" rx="1" class="cursor" />
+  </g>
+</svg>
