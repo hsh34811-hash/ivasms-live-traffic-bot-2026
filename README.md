@@ -215,6 +215,16 @@ To report security vulnerabilities, please refer to [Security Policy](SECURITY.m
 
 ## License & Intellectual Property
 
+<p align="center">
+  <a href="https://polyformproject.org/licenses/noncommercial/1.0.0/">
+    <img src="https://polyformproject.org/polyform-logo.png" alt="PolyForm Project Official Logo" width="150" />
+  </a>
+  <br/>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-PolyForm_Noncommercial_1.0.0-008080.svg?style=for-the-badge&logo=spdx&logoColor=white" alt="PolyForm Noncommercial License 1.0.0 Badge" />
+  </a>
+</p>
+
 This project is licensed under the **PolyForm Noncommercial License 1.0.0** (Source-Available / Noncommercial).
 
 ```text
