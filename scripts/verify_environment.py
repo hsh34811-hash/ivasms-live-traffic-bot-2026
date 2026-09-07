@@ -60,7 +60,7 @@ def check_files():
         "locales.py",
         "ivasms_manager.py",
         "requirements.txt",
-        "LICENSE"
+        "LICENSE.md"
     ]
     all_ok = True
     for fname in essential_files:

@@ -2,7 +2,7 @@
 
 High-throughput, event-driven Telegram bot and real-time SMS traffic routing engine designed for continuous OTP extraction, virtual number pooling, and session synchronization with the iVasms monetization platform.
 
-[![License](https://img.shields.io/badge/License-PolyForm_Noncommercial_1.0.0-008080.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-PolyForm_Noncommercial_1.0.0-008080.svg)](LICENSE.md)
 [![Release](https://img.shields.io/badge/Release-v2.0.0-blue.svg)](CHANGELOG.md)
 [![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![CI](https://img.shields.io/badge/CI-passing-brightgreen.svg?logo=githubactions&logoColor=white)](.github/workflows/ci.yml)
@@ -106,7 +106,7 @@ For in-depth architectural details, lock models, and data flows, see [System Arc
 ├── CHANGELOG.md               # Version history adhering to Keep a Changelog
 ├── CODE_OF_CONDUCT.md         # Contributor Covenant v2.1
 ├── CONTRIBUTING.md            # Guidelines for code contributions
-├── LICENSE                    # PolyForm Noncommercial License 1.0.0
+├── LICENSE.md                 # PolyForm Noncommercial License 1.0.0
 ├── README.md                  # Project root document
 ├── SECURITY.md                # Vulnerability disclosure and secret policy
 ├── SUPPORT.md                 # Official communication channels
@@ -217,10 +217,10 @@ To report security vulnerabilities, please refer to [Security Policy](SECURITY.m
 
 <p align="center">
   <a href="https://polyformproject.org/licenses/noncommercial/1.0.0/">
-    <img src="https://polyformproject.org/polyform-logo.png" alt="PolyForm Project Official Logo" width="150" />
+    <img src="docs/assets/polyform-logo.png" alt="PolyForm Project Official Logo" width="280" />
   </a>
   <br/>
-  <a href="LICENSE">
+  <a href="LICENSE.md">
     <img src="https://img.shields.io/badge/License-PolyForm_Noncommercial_1.0.0-008080.svg?style=for-the-badge&logo=spdx&logoColor=white" alt="PolyForm Noncommercial License 1.0.0 Badge" />
   </a>
 </p>
@@ -235,7 +235,7 @@ Required Notice: Copyright (c) 2026 RAVEN BOT X Team (@P_X_24, @Raven_xx24)
 - **Prohibited**: Any commercial use, selling, redistribution as a paid product, or offering as a commercial service without explicit written permission from the copyright holders.
 - **Third-Party Notices**: Upstream libraries belong to their respective authors and licenses as detailed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
-Review the full legal terms in [LICENSE](LICENSE).
+Review the full legal terms in [LICENSE.md](LICENSE.md).
 
 ---
 

@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://polyformproject.org/licenses/noncommercial/1.0.0/">
-    <img src="https://polyformproject.org/polyform-logo.png" alt="PolyForm Project Official Logo" width="160" />
+    <img src="docs/assets/polyform-logo.png" alt="PolyForm Project Official Logo" width="300" />
   </a>
   <br/>
   <a href="https://polyformproject.org/licenses/noncommercial/1.0.0/">
