@@ -16,8 +16,8 @@ This guide describes how to deploy RAVEN BOT X on a Linux server or development 
 ## Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/Raven-Team/raven-bot-x.git
-cd raven-bot-x
+git clone https://github.com/hsh34811-hash/ivasms-live-traffic-bot-2026.git
+cd ivasms-live-traffic-bot-2026
 ```
 
 ---

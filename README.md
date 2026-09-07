@@ -133,8 +133,8 @@ For in-depth architectural details, lock models, and data flows, see [System Arc
 
 ```bash
 # Clone the repository
-git clone https://github.com/Raven-Team/raven-bot-x.git
-cd raven-bot-x
+git clone https://github.com/hsh34811-hash/ivasms-live-traffic-bot-2026.git
+cd ivasms-live-traffic-bot-2026
 
 # Create virtual environment
 python3 -m venv venv
@@ -233,5 +233,5 @@ Review the full legal terms in [LICENSE](LICENSE).
 
 - **Lead Developer**: [@P_X_24](https://t.me/P_X_24) on Telegram
 - **Official Channel**: [@Raven_xx24](https://t.me/Raven_xx24) on Telegram
-- **Issue Tracker**: [GitHub Issues](https://github.com/Raven-Team/raven-bot-x/issues) (Bug reports and feature proposals)
+- **Issue Tracker**: [GitHub Issues](https://github.com/hsh34811-hash/ivasms-live-traffic-bot-2026/issues) (Bug reports and feature proposals)
 - **Support Documentation**: [Support Guide](SUPPORT.md)

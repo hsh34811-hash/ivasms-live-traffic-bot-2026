@@ -14,7 +14,7 @@ By contributing to this repository, you agree that all submitted contributions w
 ## How to Contribute
 
 ### 1. Reporting Bugs
-- Search existing [GitHub Issues](https://github.com/Raven-Team/raven-bot-x/issues) to avoid duplicate reports.
+- Search existing [GitHub Issues](https://github.com/hsh34811-hash/ivasms-live-traffic-bot-2026/issues) to avoid duplicate reports.
 - If you find a new bug, submit an issue using the [Bug Report Template](.github/ISSUE_TEMPLATE/bug_report.md).
 - Include terminal logs, steps to reproduce, and environment details.
 

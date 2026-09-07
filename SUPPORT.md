@@ -19,4 +19,4 @@ For direct inquiries, operational assistance, or reporting:
 
 * **Lead Developer (Telegram)**: [@P_X_24](https://t.me/P_X_24)
 * **Official Channel (Telegram)**: [@Raven_xx24](https://t.me/Raven_xx24)
-* **GitHub Issues**: Use [GitHub Issues](https://github.com/Raven-Team/raven-bot-x/issues) for verified bug reports and technical questions.
+* **GitHub Issues**: Use [GitHub Issues](https://github.com/hsh34811-hash/ivasms-live-traffic-bot-2026/issues) for verified bug reports and technical questions.
