@@ -34,7 +34,7 @@ The architecture is engineered for continuous unattended operation, incorporatin
 The following execution trace demonstrates real-time ingestion, microsecond OTP pattern resolution, and broadcast delivery across active subscriber pools:
 
 <p align="center">
-  <img src="docs/assets/terminal-demo.svg" alt="Live Engine Terminal Execution Trace" width="100%" />
+  <img src="docs/assets/terminal-demo.gif" alt="Live Engine Terminal Execution Trace" width="100%" />
 </p>
 
 ---
