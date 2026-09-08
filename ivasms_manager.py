@@ -24,9 +24,12 @@ DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bot1.db")
 COOKIES_JSON = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mafia_ck_4235.json")
 
 def find_latest_cookie_txt():
-    """البحث عن أحدث ملف كوكيز تم تحميله في مجلد Downloads"""
+    """البحث عن أحدث ملف كوكيز تم تحميله"""
     import glob
-    candidates = glob.glob("/home/obs/Downloads/*cookie*.txt")
+    download_dir = os.path.join(os.path.expanduser("~"), "Downloads")
+    candidates = glob.glob(os.path.join(download_dir, "*cookie*.txt")) if os.path.isdir(download_dir) else []
+    if not candidates:
+        candidates = glob.glob(os.path.join(os.getcwd(), "*cookie*.txt"))
     if not candidates:
         return None
     candidates.sort(key=os.path.getmtime, reverse=True)

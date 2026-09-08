@@ -81,10 +81,10 @@ SAMPLE_LOOKUPS = [
 
 SAMPLE_COOKIES = (
     "# Netscape HTTP Cookie File\n"
-    ".ivasms.com\tTRUE\t/\tFALSE\t1788636334\t_fbp\tfb.1.1788636334907.69647472716\n"
-    "www.ivasms.com\tFALSE\t/\tTRUE\t1788636334\tcf_clearance\tmock_cf_clearance_sample\n"
-    "www.ivasms.com\tFALSE\t/\tTRUE\t1788636334\tivas_sms_session\tmock_session_sample\n"
-    "www.ivasms.com\tFALSE\t/\tTRUE\t1788636334\tXSRF-TOKEN\teyJpdiI6InR5bWVUQnFEZGlRa1dPYT\n"
+    ".ivasms.com\tTRUE\t/\tFALSE\t1788636334\t_fbp\tfb.1.mock_fbp_token_example\n"
+    "www.ivasms.com\tFALSE\t/\tTRUE\t1788636334\tcf_clearance\tmock_cf_clearance_sample_for_benchmarking\n"
+    "www.ivasms.com\tFALSE\t/\tTRUE\t1788636334\tivas_sms_session\tmock_session_token_sample_for_benchmarking\n"
+    "www.ivasms.com\tFALSE\t/\tTRUE\t1788636334\tXSRF-TOKEN\tmock_xsrf_token_sample_for_benchmarking\n"
 )
 
 def get_hardware_info():

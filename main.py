@@ -74,7 +74,10 @@ def save_cookies_to_file(cookies_dict):
 
 def load_cookies_from_file():
     import glob
-    candidates = glob.glob("/home/obs/Downloads/*cookie*.txt")
+    download_dir = os.path.join(os.path.expanduser("~"), "Downloads")
+    candidates = glob.glob(os.path.join(download_dir, "*cookie*.txt")) if os.path.isdir(download_dir) else []
+    if not candidates:
+        candidates = glob.glob(os.path.join(os.getcwd(), "*cookie*.txt"))
     if candidates:
         candidates.sort(key=os.path.getmtime, reverse=True)
         latest_txt = candidates[0]
@@ -365,33 +368,33 @@ def apply_cookies(cookies_list_or_dict, csrf_token=None, custom_headers=None):
 
 
 # ======================
-# 🖥️ إعداد اللوحة الوحيدة (iVasms)
+# 🔧 تحميل المتغيرات السرية والبيئة (.env)
 # ======================
+def _load_env_file():
+    env_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env")
+    if os.path.isfile(env_file):
+        try:
+            with open(env_file, "r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith("#") and "=" in line:
+                        k, v = line.split("=", 1)
+                        k = k.strip()
+                        v = v.strip().strip("'\"")
+                        if k and k not in os.environ:
+                            os.environ[k] = v
+        except Exception:
+            pass
 
-IVASMS_DASHBOARD = {
-    "name": "iVasms",
-    "type": "ivasms",
-    "login_url": "https://www.ivasms.com/login",
-    "base_url": "https://www.ivasms.com",
-    "sms_api_endpoint": "https://www.ivasms.com/portal/sms/received/getsms",
-    "username": "user@example.com",
-    "password": "REDACTED_PASSWORD",
-    "session": requests.Session(),
-    "is_logged_in": False,
-    "cookies": None,
-    "csrf_token": None,
-    "last_check": None
-}
+_load_env_file()
 
-# ======================
-# 🔧 إعدادات عامة
-# ======================
-USERNAME = os.getenv("IVASMS_USERNAME", "user@example.com")
-PASSWORD = os.getenv("IVASMS_PASSWORD", "REDACTED_PASSWORD")
-BOT_TOKEN = os.getenv("BOT_TOKEN", "REDACTED_TELEGRAM_TOKEN")
-CHAT_IDS = [
-    "-1001234567890",
-]
+USERNAME = os.getenv("IVASMS_USERNAME", "")
+PASSWORD = os.getenv("IVASMS_PASSWORD", "")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "")
+
+_env_chats = os.getenv("CHAT_IDS", "")
+CHAT_IDS = [x.strip() for x in _env_chats.split(",") if x.strip()]
+
 REFRESH_INTERVAL = int(os.getenv("REFRESH_INTERVAL", "6"))
 TIMEOUT = int(os.getenv("REQUEST_TIMEOUT", "100"))
 MAX_RETRIES = 5
@@ -404,19 +407,37 @@ IDX_SMS = 5
 SENT_MESSAGES_FILE = "sent_messages_bot1.json"
 
 _env_admins = os.getenv("ADMIN_IDS", "")
-ADMIN_IDS = [int(x.strip()) for x in _env_admins.split(",") if x.strip().isdigit()] if _env_admins else [123456789]
+ADMIN_IDS = [int(x.strip()) for x in _env_admins.split(",") if x.strip().isdigit()]
 DB_PATH = os.getenv("DATABASE_PATH", "bot1.db")
 FORCE_SUB_CHANNEL = None
 FORCE_SUB_ENABLED = False
 BOT_ACTIVE = True 
 
+# ======================
+# 🖥️ إعداد اللوحة الوحيدة (iVasms)
+# ======================
+IVASMS_DASHBOARD = {
+    "name": "iVasms",
+    "type": "ivasms",
+    "login_url": "https://www.ivasms.com/login",
+    "base_url": "https://www.ivasms.com",
+    "sms_api_endpoint": "https://www.ivasms.com/portal/sms/received/getsms",
+    "username": USERNAME,
+    "password": PASSWORD,
+    "session": requests.Session(),
+    "is_logged_in": False,
+    "cookies": None,
+    "csrf_token": None,
+    "last_check": None
+}
+
 if not BOT_TOKEN:
-    raise SystemExit("❌ BOT_TOKEN must be set in Secrets (Environment Variables)")
+    raise SystemExit("❌ BOT_TOKEN must be set in Environment Variables or .env file (see .env.example)")
 if not CHAT_IDS:
-    raise SystemExit("❌ CHAT_IDS must be configured")
+    raise SystemExit("❌ CHAT_IDS must be configured in Environment Variables or .env file")
 if not USERNAME or not PASSWORD:
-    print("⚠️  WARNING: SITE_USERNAME and SITE_PASSWORD not set in Secrets")
-    print("⚠️  Bot will continue but login may fail")
+    print("⚠️  WARNING: IVASMS_USERNAME and IVASMS_PASSWORD not set in environment")
+    print("⚠️  Bot will continue but session auto-login may fail")
 
 # ======================
 # 🌍 رموز الدول والتطبيقات الذكية

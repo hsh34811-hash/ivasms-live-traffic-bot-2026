@@ -37,17 +37,17 @@ SAMPLE_MESSAGES = [
 
 SAMPLE_NETSCAPE_COOKIES = (
     "# Netscape HTTP Cookie File\n"
-    ".ivasms.com\tTRUE\t/\tFALSE\t1788636334\t_fbp\tfb.1.1788636334907.69647472716\n"
-    "www.ivasms.com\tFALSE\t/\tTRUE\t1788636334\tcf_clearance\tmock_cf_clearance_sample\n"
-    "www.ivasms.com\tFALSE\t/\tTRUE\t1788636334\tivas_sms_session\tmock_session_sample\n"
-    "www.ivasms.com\tFALSE\t/\tTRUE\t1788636334\tXSRF-TOKEN\teyJpdiI6InR5bWVUQnFEZGlRa1dPYT\n"
+    ".ivasms.com\tTRUE\t/\tFALSE\t1788636334\t_fbp\tfb.1.mock_fbp_token_example\n"
+    "www.ivasms.com\tFALSE\t/\tTRUE\t1788636334\tcf_clearance\tmock_cf_clearance_sample_for_benchmarking\n"
+    "www.ivasms.com\tFALSE\t/\tTRUE\t1788636334\tivas_sms_session\tmock_session_token_sample_for_benchmarking\n"
+    "www.ivasms.com\tFALSE\t/\tTRUE\t1788636334\tXSRF-TOKEN\tmock_xsrf_token_sample_for_benchmarking\n"
 )
 
 SAMPLE_JSON_COOKIES = json.dumps([
-    {"name": "_fbp", "value": "fb.1.1788636334907.69647472716", "domain": ".ivasms.com", "path": "/"},
-    {"name": "cf_clearance", "value": "mock_cf_clearance_sample", "domain": "www.ivasms.com", "path": "/"},
-    {"name": "ivas_sms_session", "value": "mock_session_sample", "domain": "www.ivasms.com", "path": "/"},
-    {"name": "XSRF-TOKEN", "value": "eyJpdiI6InR5bWVUQnFEZGlRa1dPYT", "domain": "www.ivasms.com", "path": "/"},
+    {"name": "_fbp", "value": "fb.1.mock_fbp_token_example", "domain": ".ivasms.com", "path": "/"},
+    {"name": "cf_clearance", "value": "mock_cf_clearance_sample_for_benchmarking", "domain": "www.ivasms.com", "path": "/"},
+    {"name": "ivas_sms_session", "value": "mock_session_token_sample_for_benchmarking", "domain": "www.ivasms.com", "path": "/"},
+    {"name": "XSRF-TOKEN", "value": "mock_xsrf_token_sample_for_benchmarking", "domain": "www.ivasms.com", "path": "/"},
 ])
 
 def run_benchmark(name, func, args_list, iterations=10000, warmup=1000):
